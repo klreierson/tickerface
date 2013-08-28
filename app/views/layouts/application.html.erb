@@ -1,14 +1,46 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Tickerface</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
+  	<%= stylesheet_link_tag    "application", :media => "all" %>
+	<%= javascript_include_tag "application" %>
 </head>
+
 <body>
+	<div id="container">
+		<div id="header">
+			<%== image_tag "header.png" %>
+		</div>
 
-<%= yield %>
+		<div id="logo">
+			 <a href="index.html"</a>
+		</div>
+			<nav>
+				<ul>
+					<li class="drop">
+						<a href="#">Browse</a>
+						<div class="dropdownContain">
+							<div class="dropOut">
+								<div class="triangle"></div>
+								<ul>
+									<li>My Profile</li>
+									<li>Sectors</li>
+									<li>Events</li>
+									<li>Live Video</li>
+		              				<li>Contact</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		<div id="login-button"> Sign In </div>
 
+		<div id=“footnotes_holder”> </div>
+
+	<%= yield %>
+
+	</div>
 </body>
 </html>

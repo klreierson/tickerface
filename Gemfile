@@ -34,6 +34,10 @@ gem 'rake_db_dump'
 
 gem 'rails-footnotes', group: :development
 
+gem "market_beat"
+
+gem "table_print", "~> 1.0.0"
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
