@@ -17,6 +17,8 @@ ActiveRecord::Schema.define(:version => 20130802031220) do
     t.string "symbol"
     t.string "name"
     t.string "sector"
+    t.string "industry"
+    t.string "headquarters"
   end
 
   create_table "profile", :force => true do |t|

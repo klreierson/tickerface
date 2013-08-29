@@ -14,6 +14,8 @@ class InitialSchema < ActiveRecord::Migration
     t.string :symbol
     t.string :name
     t.string :sector
+    t.string :industry
+    t.string :headquarters
     end
   end
 
