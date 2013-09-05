@@ -22,6 +22,7 @@ class MainController < ApplicationController
 		render :company and return
 	end
 
+
 	def company_post
 		redirect_to "/company/#{params[:symbol]}"
 	end
@@ -33,10 +34,12 @@ class MainController < ApplicationController
 	  render :profile and return
 	end
 
+
 	def show
 		gifs = ["1.gif", "2.gif","3.gif","4.gif","5.gif"]
 
 	end
+
 
 
 end

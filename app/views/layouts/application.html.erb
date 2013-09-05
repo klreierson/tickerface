@@ -13,12 +13,14 @@
 			<%== image_tag "header.png" %>
 		</div>
 
+
 		<div id="search">
 			<%= form_tag("/company", method: "post") do %>
 			  <%= search_field_tag(:symbol, "Enter symbol") %>
 			  <%= submit_tag ("Search") %>
 			 <% end %>
 		</div>
+
 
 		<div id="logo">
 			 <a href="index.html"</a>
