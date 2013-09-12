@@ -19,6 +19,12 @@ class MainController < ApplicationController
 		# @market_cap is rounded to billions
 		@market_cap = market_cap.to_i / 1000
 
+		very_bad = ["1.gif", "2.gif","3.gif","4.gif","5.gif"]
+		bad = ["1.gif", "2.gif","3.gif","4.gif","5.gif"]
+		ok = ["1.gif", "2.gif","3.gif","4.gif","5.gif"]
+		good = ["1.gif", "2.gif","3.gif","4.gif","5.gif"]
+		very_good = ["1.gif", "2.gif","3.gif","4.gif","5.gif"]
+
 		render :company and return
 	end
 
@@ -33,13 +39,5 @@ class MainController < ApplicationController
 
 	  render :profile and return
 	end
-
-
-	def show
-		gifs = ["1.gif", "2.gif","3.gif","4.gif","5.gif"]
-
-	end
-
-
 
 end

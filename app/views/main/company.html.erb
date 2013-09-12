@@ -21,10 +21,23 @@
 			<% end %>
 		</div>
 
-		<figure class="freezeframe-container">
-			<%== image_tag "jonah.gif" %>
+	<figure class="main-freezeframe-container">
+
+		<% if @change[1] <= "-1.5"
+			very_bad = @face  %>
+		<% elsif @change[1] <= "-0.5"
+			bad = @face  %>
+		<% elsif @change[1] <= "0.5"
+			ok = @face  %>
+		<% elsif @change[1] <= "1.49"
+			good = @face  %>
+		<% else @change[1] <= "1.5"
+			very_good = @face  %>
+		<% end %>
+
+		<%= image_tag  "gifs/#{@face}/#{rand(5)}.gif" %>
 			<br>(hover to play clip)
-		</figure>
+	</figure>
 
 		<div id="chart">
 			<img src="http://app.quotemedia.com/quotetools/getChart.go?webmasterId=500&chtype=AreaChart&symbol=<%= params[:symbol]%>&chmrg=3&chscale=1d&chwid=200&chhig=200&chsym=<%= params[:symbol]%>Intraday">
@@ -33,50 +46,30 @@
 		<div class="CSSTableGenerator">
 			<table>
 		  		<tr>
-
-		    		<th>Company Info</th>
-		  		</tr>
-		  		<tr>
 		  			<td>Stock Exchange</td>
 		  			<td>Sector</td>
 		  			<td>Industry</td>
 				    <td>Days Range</td>
 				    <td>Volume</td>
-
-
-		    		<th>Key Stock Data</th>
-		  		</tr>
-		  		<tr>
-				    <td>Days Range</td>
-				    <td>Volume</td>
-					<td>Stock Exchange</td>
-
 					<td>Market Cap (billions)</td>
 					<td>EPS</td>
 					<td>P/E Ratio</td>
 				  </tr>
 				  <tr>
-
 				  	<td><%= @stock_exchange %></td>
 				  	<td> <%= @sector %> </td>
 				  	<td> <%= @industry %> </td>
 				    <td><%= @days_range[0] %> - <%= @days_range[1] %></td>
 				    <td><%= @volume %></td>
-
-				    <td><%= @days_range[0] %> - <%= @days_range[1] %></td>
-				    <td><%= @volume %></td>
-					<td><%= @stock_exchange %></td>
-
 					<td><%= @market_cap %></td>
 					<td><%= @eps %></td>
 					<td><%= @pe %></td>
 			  </tr>
 			</table>
 		</div>
-
-
+	</div>
 </div>
 <% end %>
 
-</div>
+
 

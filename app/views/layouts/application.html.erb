@@ -14,9 +14,10 @@
 		</div>
 
 
+
 		<div id="search">
 			<%= form_tag("/company", method: "post") do %>
-			  <%= search_field_tag(:symbol, "Enter symbol") %>
+			  <%= search_field_tag(:symbol, nil, :placeholder => 'Enter symbol...') %>
 			  <%= submit_tag ("Search") %>
 			 <% end %>
 		</div>
